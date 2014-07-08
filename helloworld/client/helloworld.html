@@ -1,0 +1,64 @@
+<head>
+ <title>Hello World</title>
+</head>
+ 
+<body>
+<h1>Hello ,{{> hello}}</h1>
+
+
+{{> form}}
+<div id="orderbook" style="padding-bottom: 115px;">
+{{> data}}
+ </div>
+
+
+
+
+</body>
+ 
+<template name="hello">
+ {{somebody}}
+</template>
+ 
+<template name="form">
+ <input id='newName' type='text'/><input type='submit' value='Greet!'/>
+</template>
+
+<template name="data">
+ {{data_table}}
+<table class="table" style="padding-bottom: 115px;">
+              <thead>
+                <tr>
+                  <th>#</th>
+
+                  <th>Value</th>
+                  <th>currency</th>
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+
+                  <td>Last Local</td>
+                  <td>{{product.[0]}}</td>
+                  <td>{{product.[1]}}</td>
+
+                </tr>
+                <tr>
+                  <td>2</td>
+
+                  <td>TB</td>
+                  <td>02/04/2012</td>
+
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>TB</td>
+
+                  <td>03/04/2012</td>
+
+                </tr>
+</table> 
+</template>
+
+
